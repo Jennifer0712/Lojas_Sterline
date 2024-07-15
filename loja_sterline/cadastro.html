@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <script src="cadastro.js" defer></script>
+
+    <!--FavIcon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+    <title>Loja Sterline</title>
+
+</head>
+
+<body>
+    <!-- Header-->
+
+    <div class="header">
+      <a href="index.html"><img src="img/logo-removebg-preview.png" alt=""></a>
+       <h1>Loja Sterline</h1>
+       
+ </div>
+
+
+
+<!-- NavBar-->
+<nav>
+ <ul>
+   <div id="mySidepanel" class="sidepanel">
+     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+       <label class="switch">
+       <input type="checkbox" name="change-theme" id="change-theme" class="switch">
+       <span class="slider round"></span>
+       </label>
+
+       <button type="button" id="btnAumentar">Aumentar fonte</button>
+       <button type="button" id="btnDiminuir">Diminuir fonte</button>
+   </div>
+
+   <button class="openbtn" onclick="openNav()"> Acessibilidades</button>
+   <li><a href="index.html">Home</a></li>
+   <li><a href="produto.html">Produtos</a></li>
+   <li><a href="contato.html">Contato</a></li>
+ </ul>
+</nav>
+<br><br>
+     <!-- banner-->
+
+  <div class="banner-produto" id="banner">
+    <h2>Cadastro Produto</h2>
+  </div>
+      
+  <main>
+    <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Produto</button>
+    <table id="tableClient" class="records">
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Coleção</th>
+                <th>Fabricante</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+  
+        </tbody>
+    </table>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <header class="modal-header">
+                <h2>Novo Produto</h2>
+                <span class="modal-close" id="modalClose">&#10006;</span>
+            </header>
+            <form id="form" class="modal-form">
+                <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Produto"
+                    required>
+                <input type="text" id="email" class="modal-field" placeholder="Preço do Produto" required>
+                <input type="text" id="celular" class="modal-field" placeholder="Coleção do Produto" required>
+                <input type="text" id="cidade" class="modal-field" placeholder="Fabricante do Produto" required>
+            </form>
+            <footer class="modal-footer">
+                <button id="salvar" class="button green">Salvar</button>
+                <button id="cancelar" class="button blue">Cancelar</button>
+            </footer>
+        </div>
+    </div>
+  </main>
+
+  <div class="logo">
+    <img src="img/logo.jpg" alt="">
+    <h3>Loja Sterline</h3>
+  </div>
+  <br><br>
+       
+</body>
+
+</html>

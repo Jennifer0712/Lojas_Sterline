@@ -1,0 +1,197 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+  }
+  
+  .header {
+    background-color: #ECA1BE;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+
+  .dark-mode .header {
+    background-color: #8C5B49;
+    color: black;
+  }
+
+  .header h1{
+    margin-left: 0px;
+  }
+
+  .header img{
+    width: 100px;
+    height: 70px;
+    float: left;
+    margin-left: 0px;
+  }
+
+  nav{
+    padding: 0;
+    background-color: #5FB8D4;
+    text-align: center;
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav li{
+    list-style: none;
+    display: inline-block;
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    padding: 16px;
+    color: white;
+}
+
+nav a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.img-fluid{
+  width: 253px;
+  height: 323px;
+}
+
+footer {
+  background: #5FB8D4;
+  padding: 25px 0;
+  color: white;
+  position: relative;
+  bottom: 0;
+}
+footer a {
+  color: #FFF;
+}
+footer a:hover {
+  color: #FFF;
+}
+
+footer ul li.ellipsis {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*dark*/
+.dark .header {
+  background: #BF7C63;
+}
+
+.dark{
+  background: #111;
+  color: #fff;
+}
+
+.dark nav,
+.dark footer{
+  background: #8C1616;
+}
+
+.dark .pre-btn,
+.dark .nxt-btn {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #111 100%);
+}
+
+.sidepanel {
+  height: 250px;
+  width: 0; 
+  position: fixed; 
+  z-index: 999;
+  top: 0;
+  right: 0;
+  overflow-x: hidden; 
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-right: 0;
+}
+
+.openbtn {
+  right: 0;
+  cursor: pointer;
+  padding: 10px 15px;
+  border: none;
+  justify-content: flex-end;
+  background-color: transparent;
+  color: white;
+}
